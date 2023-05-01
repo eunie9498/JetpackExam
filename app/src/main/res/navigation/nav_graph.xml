@@ -17,11 +17,17 @@
             android:id="@+id/toList"
             app:destination="@id/listFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/gridFragment"
         android:name="kong.droid.jetpacknavi.GridFragment"
         android:label="GridFragment"
-        tools:layout="@layout/fragment_grid" />
+        tools:layout="@layout/fragment_grid" >
+        <argument
+            android:name="testArgs"
+            app:argType="string" />
+    </fragment>
+
     <fragment
         android:id="@+id/listFragment"
         android:name="kong.droid.jetpacknavi.ListFragment"

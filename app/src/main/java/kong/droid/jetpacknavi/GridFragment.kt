@@ -17,4 +17,11 @@ class GridFragment : Fragment() {
         binding = FragmentGridBinding.inflate(inflater, container, false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        arguments?.let {
+            binding.tvGrid.text = GridFragmentArgs.fromBundle(it).testArgs
+        }
+    }
 }

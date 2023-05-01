@@ -29,16 +29,13 @@ class MainFragment : Fragment() {
     }
 
     fun moveToList(view: TextView) {
-        val action =
-            MainFragmentDirections
-                .toList()
+        val action = MainFragmentDirections.toList()
         view.findNavController().navigate(action)
     }
 
     fun moveToGrid(view: TextView) {
         val action =
-            MainFragmentDirections
-                .toGrid()
+            MainFragmentDirections.toGrid("제대로 전달되었습니다")
         view.findNavController().navigate(action)
     }
 }
